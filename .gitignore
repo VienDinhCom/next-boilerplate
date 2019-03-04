@@ -8,8 +8,8 @@
 # testing
 /coverage
 
-# production
-/build
+# next
+app/.next
 
 # misc
 .firebase

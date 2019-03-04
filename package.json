@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^4.0.0",
+    "eslint-config-react-app": "^3.0.7",
     "eslint-plugin-prettier": "^3.0.1",
     "flow-bin": "^0.93.0",
     "flow-typed": "^2.5.1",

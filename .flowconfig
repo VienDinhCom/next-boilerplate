@@ -1,9 +1,8 @@
 [ignore]
-.*/build/.*
+.*/app/.next/.*
 .*\.test\.js
 .*/flow-typed/.*
 .*/node_modules/.*
-.*/src/services/worker.js
 
 [include]
 
