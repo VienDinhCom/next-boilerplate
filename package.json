@@ -1,0 +1,31 @@
+{
+  "name": "next-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev app",
+    "build": "next build app",
+    "start": "next start app",
+    "flow": "flow check app",
+    "flow:i": "flow-typed install",
+    "push": "git add . && git commit -m Update && git pull origin && git push origin"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "next": "^8.0.3",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "flow-bin": "^0.93.0",
+    "flow-typed": "^2.5.1",
+    "prettier": "^1.16.4"
+  }
+}
