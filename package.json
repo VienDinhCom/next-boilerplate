@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node .server",
     "start:w": "nodemon --watch .server",
-    "build": "next build && rimraf -rf .server && babel server --verbose --copy-files -d .server",
+    "build": "next build && rimraf -rf .server && babel server --no-babelrc --config-file ./.babelrc-server --verbose --copy-files -d .server",
     "build:w": "yarn build -w",
     "flow": "flow check .",
     "flow:i": "flow-typed install"
@@ -18,7 +18,8 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
-    "@babel/plugin-transform-flow-strip-types": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-flow": "^7.0.0",
     "babel-eslint": "9.x",
     "eslint": "5.x",
     "eslint-config-prettier": "^4.0.0",
