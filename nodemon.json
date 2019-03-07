@@ -1,4 +1,0 @@
-{
-  "watch": ["server/**/*.js"],
-  "exec": "rimraf -rf .server && babel server --verbose --copy-files -d .server && node .server"
-}
