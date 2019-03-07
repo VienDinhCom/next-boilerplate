@@ -3,20 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev app",
-    "build": "next build app",
-    "start": "next start app",
-    "flow": "flow check app",
-    "flow:i": "flow-typed install",
-    "push": "git add . && git commit -m Update && git pull origin && git push origin"
+    "dev": "nodemon",
+    "build": "next build && babel server --verbose --copy-files -d .server",
+    "start": "cross-env NODE_ENV=production node .server",
+    "flow": "flow check .",
+    "flow:i": "flow-typed install"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "next": "^8.0.3",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/plugin-transform-flow-strip-types": "^7.3.4",
     "babel-eslint": "9.x",
+    "cross-env": "^5.2.0",
     "eslint": "5.x",
     "eslint-config-prettier": "^4.0.0",
     "eslint-config-react-app": "^3.0.7",
@@ -25,8 +28,9 @@
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "7.x",
-    "flow-bin": "^0.93.0",
+    "flow-bin": "^0.94.0",
     "flow-typed": "^2.5.1",
+    "nodemon": "^1.18.10",
     "prettier": "^1.16.4"
   }
 }

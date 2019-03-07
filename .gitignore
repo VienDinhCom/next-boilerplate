@@ -8,8 +8,9 @@
 # testing
 /coverage
 
-# next
-app/.next
+# build
+/.next
+/.server
 
 # misc
 .firebase

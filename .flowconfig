@@ -1,6 +1,6 @@
 [ignore]
-.*/app/.next/.*
-.*\.test\.js
+.*/.next/.*
+.*/.server/.*
 .*/flow-typed/.*
 .*/node_modules/.*
 
