@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon",
-    "build": "next build && babel server --verbose --copy-files -d .server",
-    "start": "cross-env NODE_ENV=production node .server",
+    "start": "node .server",
+    "start:w": "nodemon --watch .server",
+    "build": "next build && rimraf -rf .server && babel server --verbose --copy-files -d .server",
+    "build:w": "yarn build -w",
     "flow": "flow check .",
     "flow:i": "flow-typed install"
   },
@@ -19,7 +20,6 @@
     "@babel/cli": "^7.2.3",
     "@babel/plugin-transform-flow-strip-types": "^7.3.4",
     "babel-eslint": "9.x",
-    "cross-env": "^5.2.0",
     "eslint": "5.x",
     "eslint-config-prettier": "^4.0.0",
     "eslint-config-react-app": "^3.0.7",
@@ -31,6 +31,7 @@
     "flow-bin": "^0.94.0",
     "flow-typed": "^2.5.1",
     "nodemon": "^1.18.10",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "yarn": "^1.13.0"
   }
 }
